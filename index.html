@@ -7,9 +7,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Title -->
     <h1 class="title">বাংলা গণনাযন্ত্র</h1>
+
+    <!-- Calculator Container -->
     <div class="calculator">
         <input type="text" id="result" disabled>
+
+        <!-- Calculator Buttons -->
         <div class="buttons">
             <button onclick="appendValue('১')">১</button>
             <button onclick="appendValue('২')">২</button>
@@ -19,22 +25,33 @@
             <button onclick="appendValue('৪')">৪</button>
             <button onclick="appendValue('৫')">৫</button>
             <button onclick="appendValue('৬')">৬</button>
-            <button onclick="appendValue('-')">-</button>
+            <button onclick="appendValue('-')">−</button>
 
             <button onclick="appendValue('৭')">৭</button>
             <button onclick="appendValue('৮')">৮</button>
             <button onclick="appendValue('৯')">৯</button>
-            <button onclick="appendValue('*')">*</button>
+            <button onclick="appendValue('*')">×</button>
 
-            <button onclick="appendValue('0')">০</button>
+            <button onclick="appendValue('০')">০</button>
             <button onclick="clearScreen()">মুছুন</button>
             <button onclick="calculate()">=</button>
-            <button onclick="appendValue('/')">/</button>
+            <button onclick="appendValue('/')">÷</button>
         </div>
     </div>
+
+    <!-- Footer -->
     <footer>
-<p> উৎসর্গঃ স্টিভ জবসখ্যাত প্রযুক্তি বিশেষ-অজ্ঞ মোস্তাফা জব্বারকে <br>(ভালোবাসা দিয়ে তৈরি করা হয়েছে <a href="https://www.facebook.com/mortalmaruf" target="_blank">মোঃ মারুফুল ইসলাম</a> দ্বারা)</p>
+        <p>
+            উৎসর্গঃ স্টিভ জবসখ্যাত প্রযুক্তি-অজ্ঞ <b>মোস্তাফা জব্বার</b> কে  
+            <br> (ভালোবাসা দিয়ে তৈরি করেছেন 
+            <a href="https://www.facebook.com/mortalmaruf" target="_blank">
+                মোঃ মারুফুল ইসলাম
+            </a>)
+        </p>
     </footer>
+
+    <!-- Script -->
     <script src="script.js"></script>
+
 </body>
 </html>
