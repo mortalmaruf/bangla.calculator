@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>বাংলা গণনাযন্ত্র (মারুফের তৈরি)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,25 +18,25 @@
 
         <!-- Calculator Buttons -->
         <div class="buttons">
-            <button onclick="appendValue('১')">১</button>
-            <button onclick="appendValue('২')">২</button>
-            <button onclick="appendValue('৩')">৩</button>
-            <button onclick="appendValue('+')">+</button>
+            <button onclick="appendValue('১')" aria-label="১">১</button>
+            <button onclick="appendValue('২')" aria-label="২">২</button>
+            <button onclick="appendValue('৩')" aria-label="৩">৩</button>
+            <button onclick="appendValue('+')" aria-label="যোগ">+</button>
 
-            <button onclick="appendValue('৪')">৪</button>
-            <button onclick="appendValue('৫')">৫</button>
-            <button onclick="appendValue('৬')">৬</button>
-            <button onclick="appendValue('-')">−</button>
+            <button onclick="appendValue('৪')" aria-label="৪">৪</button>
+            <button onclick="appendValue('৫')" aria-label="৫">৫</button>
+            <button onclick="appendValue('৬')" aria-label="৬">৬</button>
+            <button onclick="appendValue('-')" aria-label="বিয়োগ">−</button>
 
-            <button onclick="appendValue('৭')">৭</button>
-            <button onclick="appendValue('৮')">৮</button>
-            <button onclick="appendValue('৯')">৯</button>
-            <button onclick="appendValue('*')">×</button>
+            <button onclick="appendValue('৭')" aria-label="৭">৭</button>
+            <button onclick="appendValue('৮')" aria-label="৮">৮</button>
+            <button onclick="appendValue('৯')" aria-label="৯">৯</button>
+            <button onclick="appendValue('*')" aria-label="গুণ">×</button>
 
-            <button onclick="appendValue('০')">০</button>
-            <button onclick="clearScreen()">মুছুন</button>
-            <button onclick="calculate()">=</button>
-            <button onclick="appendValue('/')">÷</button>
+            <button onclick="appendValue('০')" aria-label="০">০</button>
+            <button onclick="clearScreen()" aria-label="মুছুন">মুছুন</button>
+            <button onclick="calculate()" aria-label="হিসাব করুন">=</button>
+            <button onclick="appendValue('/')" aria-label="ভাগ">÷</button>
         </div>
     </div>
 
