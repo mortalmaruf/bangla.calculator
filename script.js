@@ -21,12 +21,6 @@ function clearScreen() {
 function calculate() {
     let display = document.getElementById("result").value;
 
-    // Validate the expression before calculation
-    if (!validateExpression(display)) {
-        document.getElementById("result").value = "ত্রুটি!";
-        return;
-    }
-
     // Convert Bengali digits to ASCII digits
     let asciiExpression = convertToAscii(display);
 
@@ -65,29 +59,6 @@ function convertToBengali(num) {
 function convertToAscii(expression) {
     const bengaliToAscii = { "০": "0", "১": "1", "২": "2", "৩": "3", "৪": "4", "৫": "5", "৬": "6", "৭": "7", "৮": "8", "৯": "9" };
     return expression.replace(/[০-৯]/g, (d) => bengaliToAscii[d]);
-}
-
-// Function to validate the expression
-function validateExpression(expression) {
-    // Check for balanced brackets
-    let stack = [];
-    for (let char of expression) {
-        if (char === "(") {
-            stack.push(char);
-        } else if (char === ")") {
-            if (stack.length === 0) return false; // Unbalanced brackets
-            stack.pop();
-        }
-    }
-    if (stack.length !== 0) return false; // Unbalanced brackets
-
-    // Check for invalid characters
-    const validChars = /[০-৯+\-×÷()√%x²x³]/;
-    for (let char of expression) {
-        if (!validChars.test(char)) return false;
-    }
-
-    return true;
 }
 
 // Function to handle backspace
