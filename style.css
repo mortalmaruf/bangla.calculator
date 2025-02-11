@@ -1,11 +1,11 @@
 /* General Page Styling */
 body {
-    font-family: 'SolaimanLipi', Arial, sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    text-align: center;
     margin: 0;
     padding: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -13,29 +13,29 @@ body {
 
 /* Title Styling */
 .title {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: bold;
-    margin-top: 20px;
+    margin: 20px 0;
     color: #333;
+    text-align: center;
 }
 
 /* Calculator Container */
 .calculator {
     width: 90%;
-    max-width: 500px; /* Wider for desktop */
+    max-width: 320px;
     background: #ffffff;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
     margin: 20px auto;
-    transition: 0.3s ease-in-out;
 }
 
 /* Display Screen */
 #result {
     width: 100%;
     height: 60px;
-    font-size: 28px;
+    font-size: 24px;
     text-align: right;
     padding: 10px;
     border: none;
@@ -48,12 +48,18 @@ body {
 
 /* Calculator Buttons */
 .buttons {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr); /* 6 columns */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.row {
+    display: flex;
     gap: 10px;
 }
 
 button {
+    flex: 1;
     font-size: 20px;
     font-weight: bold;
     padding: 15px;
@@ -65,69 +71,65 @@ button {
     color: #333;
 }
 
-/* Number Buttons */
-button:nth-child(n) {
-    background: #f1f1f1;
-    color: #333;
-}
-
-button:nth-child(n):hover {
+button:hover {
     background: #ddd;
 }
 
 /* Operator Buttons */
-button:nth-child(4n),
-button:nth-child(19) { /* ⌫ */
+.operator {
     background: #ff9500;
     color: #fff;
 }
 
-button:nth-child(4n):hover,
-button:nth-child(19):hover { /* ⌫ */
+.operator:hover {
     background: #e68a00;
 }
 
-/* Clear Button (মুছুন) */
-button:nth-child(18) { /* মুছুন */
-    background: #d9534f;
-    color: #fff;
-}
-
-button:nth-child(18):hover { /* মুছুন */
-    background: #c9302c;
-}
-
-/* Equal Button */
-button:nth-child(24) { /* = */
-    background: #28a745;
-    color: #fff;
-}
-
-button:nth-child(24):hover { /* = */
-    background: #218838;
-}
-
-/* Additional Buttons (√, x², x³, %) */
-button:nth-child(17), /* √ */
-button:nth-child(18), /* x² */
-button:nth-child(19), /* x³ */
-button:nth-child(20) { /* % */
+/* Special Buttons (√, x², x³, %) */
+.special {
     background: #17a2b8;
     color: #fff;
 }
 
-button:nth-child(17):hover, /* √ */
-button:nth-child(18):hover, /* x² */
-button:nth-child(19):hover, /* x³ */
-button:nth-child(20):hover { /* % */
+.special:hover {
     background: #138496;
+}
+
+/* Clear Button (মুছুন) */
+.clear {
+    background: #d9534f;
+    color: #fff;
+}
+
+.clear:hover {
+    background: #c9302c;
+}
+
+/* Backspace Button (⌫) */
+.backspace {
+    background: #6c757d;
+    color: #fff;
+}
+
+.backspace:hover {
+    background: #5a6268;
+}
+
+/* Equal Button (=) */
+.equal {
+    background: #28a745;
+    color: #fff;
+}
+
+.equal:hover {
+    background: #218838;
 }
 
 /* Footer Styling */
 footer {
     text-align: center;
     margin-top: 20px;
-    font-size: 16px;
+    font-size: 14px;
     color: #555;
     padding: 10px;
     background-color: #f8f9fa;
@@ -144,45 +146,4 @@ footer a {
 footer a:hover {
     text-decoration: underline;
     color: #0056b3;
-}
-
-/* 📌 RESPONSIVE DESIGN 📌 */
-@media (max-width: 600px) {
-    .calculator {
-        max-width: 90%; /* Smaller width for mobile */
-    }
-
-    .buttons {
-        grid-template-columns: repeat(4, 1fr); /* 4 columns for mobile */
-    }
-
-    button {
-        font-size: 18px;
-        padding: 12px;
-    }
-
-    #result {
-        font-size: 24px;
-        height: 50px;
-    }
-}
-
-@media (min-width: 601px) {
-    .calculator {
-        max-width: 500px; /* Wider for desktop */
-    }
-
-    .buttons {
-        grid-template-columns: repeat(6, 1fr); /* 6 columns for desktop */
-    }
-
-    button {
-        font-size: 20px;
-        padding: 15px;
-    }
-
-    #result {
-        font-size: 28px;
-        height: 60px;
-    }
 }
