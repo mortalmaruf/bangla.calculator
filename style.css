@@ -49,14 +49,14 @@ body {
 /* Calculator Buttons */
 .buttons {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 columns for wider layout */
-    gap: 15px;
+    grid-template-columns: repeat(6, 1fr); /* 6 columns */
+    gap: 10px;
 }
 
 button {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
-    padding: 20px;
+    padding: 15px;
     border: none;
     cursor: pointer;
     border-radius: 10px;
@@ -88,22 +88,22 @@ button:nth-child(19):hover { /* ⌫ */
 }
 
 /* Clear Button (মুছুন) */
-button:nth-child(16) { /* মুছুন */
+button:nth-child(18) { /* মুছুন */
     background: #d9534f;
     color: #fff;
 }
 
-button:nth-child(16):hover { /* মুছুন */
+button:nth-child(18):hover { /* মুছুন */
     background: #c9302c;
 }
 
 /* Equal Button */
-button:nth-child(20) { /* = */
+button:nth-child(24) { /* = */
     background: #28a745;
     color: #fff;
 }
 
-button:nth-child(20):hover { /* = */
+button:nth-child(24):hover { /* = */
     background: #218838;
 }
 
@@ -111,7 +111,7 @@ button:nth-child(20):hover { /* = */
 button:nth-child(17), /* √ */
 button:nth-child(18), /* x² */
 button:nth-child(19), /* x³ */
-button:nth-child(21) { /* % */
+button:nth-child(20) { /* % */
     background: #17a2b8;
     color: #fff;
 }
@@ -119,7 +119,7 @@ button:nth-child(21) { /* % */
 button:nth-child(17):hover, /* √ */
 button:nth-child(18):hover, /* x² */
 button:nth-child(19):hover, /* x³ */
-button:nth-child(21):hover { /* % */
+button:nth-child(20):hover { /* % */
     background: #138496;
 }
 
@@ -157,8 +157,8 @@ footer a:hover {
     }
 
     button {
-        font-size: 20px;
-        padding: 15px;
+        font-size: 18px;
+        padding: 12px;
     }
 
     #result {
@@ -173,12 +173,12 @@ footer a:hover {
     }
 
     .buttons {
-        grid-template-columns: repeat(5, 1fr); /* 5 columns for desktop */
+        grid-template-columns: repeat(6, 1fr); /* 6 columns for desktop */
     }
 
     button {
-        font-size: 24px;
-        padding: 20px;
+        font-size: 20px;
+        padding: 15px;
     }
 
     #result {
