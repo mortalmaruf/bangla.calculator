@@ -1,72 +1,34 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>বাংলা গণনাযন্ত্র (মারুফের তৈরি)</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Calculator</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <!-- Title -->
-    <h1 class="title">বাংলা গণনাযন্ত্র</h1>
-
-    <!-- Calculator Container -->
-    <div class="calculator">
-        <input type="text" id="result" disabled>
-
-        <!-- Calculator Buttons -->
-        <div class="buttons">
-            <div class="column">
-                <button onclick="appendValue('১')">১</button>
-                <button onclick="appendValue('৪')">৪</button>
-                <button onclick="appendValue('৭')">৭</button>
-                <button onclick="appendValue('০')">০</button>
-            </div>
-            <div class="column">
-                <button onclick="appendValue('২')">২</button>
-                <button onclick="appendValue('৫')">৫</button>
-                <button onclick="appendValue('৮')">৮</button>
-                <button onclick="appendValue('.')">.</button>
-            </div>
-            <div class="column">
-                <button onclick="appendValue('৩')">৩</button>
-                <button onclick="appendValue('৬')">৬</button>
-                <button onclick="appendValue('৯')">৯</button>
-                <button onclick="clearScreen()" class="clear">মুছুন</button>
-            </div>
-            <div class="column">
-                <button onclick="appendValue('+')" class="operator">+</button>
-                <button onclick="appendValue('-')" class="operator">−</button>
-                <button onclick="appendValue('*')" class="operator">×</button>
-                <button onclick="appendValue('/')" class="operator">÷</button>
-            </div>
-            <div class="column">
-                <button onclick="appendValue('√')" class="special">√</button>
-                <button onclick="appendValue('x²')" class="special">x²</button>
-                <button onclick="appendValue('x³')" class="special">x³</button>
-                <button onclick="appendValue('%')" class="special">%</button>
-            </div>
-            <div class="column">
-                <button onclick="backspace()" class="backspace">⌫</button>
-                <button onclick="calculate()" class="equal">=</button>
-            </div>
-        </div>
+  <div class="calculator">
+    <input type="text" id="display" disabled>
+    <div class="buttons">
+      <button onclick="clearDisplay()">C</button>
+      <button onclick="appendToDisplay('/')">/</button>
+      <button onclick="appendToDisplay('*')">*</button>
+      <button onclick="appendToDisplay('-')">-</button>
+      <button onclick="appendToDisplay('7')">7</button>
+      <button onclick="appendToDisplay('8')">8</button>
+      <button onclick="appendToDisplay('9')">9</button>
+      <button onclick="appendToDisplay('+')">+</button>
+      <button onclick="appendToDisplay('4')">4</button>
+      <button onclick="appendToDisplay('5')">5</button>
+      <button onclick="appendToDisplay('6')">6</button>
+      <button onclick="calculate()" class="equals">=</button>
+      <button onclick="appendToDisplay('1')">1</button>
+      <button onclick="appendToDisplay('2')">2</button>
+      <button onclick="appendToDisplay('3')">3</button>
+      <button onclick="appendToDisplay('0')">0</button>
+      <button onclick="appendToDisplay('.')">.</button>
     </div>
-
-    <!-- Footer -->
-    <footer>
-        <p>
-            উৎসর্গঃ স্টিভ জবসখ্যাত প্রযুক্তি-অজ্ঞ <b>মোস্তাফা জব্বার</b> কে  
-            <br> (ভালোবাসা দিয়ে তৈরি করেছেন 
-            <a href="https://www.facebook.com/mortalmaruf" target="_blank">
-                মোঃ মারুফুল ইসলাম
-            </a>)
-        </p>
-    </footer>
-
-    <!-- Script -->
-    <script src="script.js"></script>
-
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
