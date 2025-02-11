@@ -17,12 +17,14 @@ body {
 
 /* Calculator Container */
 .calculator {
-    width: 280px;
+    width: 90%;  /* Responsive width */
+    max-width: 320px;  /* Maximum width */
     background: #ffffff;
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     margin: 20px auto;
+    transition: 0.3s ease-in-out;
 }
 
 /* Display Screen */
@@ -77,7 +79,7 @@ button:nth-child(4n):hover {
     background: #e68a00;
 }
 
-/* Clear Button */
+/* Clear Button (প) */
 button:nth-child(14) {
     background: #d9534f;
     color: #fff;
@@ -117,4 +119,27 @@ footer a {
 footer a:hover {
     text-decoration: underline;
     color: #0056b3;
+}
+
+/* 📌 RESPONSIVE DESIGN 📌 */
+@media (min-width: 600px) {
+    .calculator {
+        max-width: 400px; /* Bigger size on larger screens */
+        padding: 20px;
     }
+
+    button {
+        font-size: 24px; /* Bigger buttons on desktop */
+        padding: 18px;
+    }
+
+    #result {
+        font-size: 26px; /* Bigger text on desktop */
+    }
+}
+
+@media (min-width: 1024px) {
+    .calculator {
+        max-width: 450px; /* Even bigger for desktops */
+    }
+}
