@@ -49,12 +49,12 @@ body {
 /* Calculator Buttons */
 .buttons {
     display: flex;
-    flex-direction: column;
     gap: 10px;
 }
 
-.row {
+.column {
     display: flex;
+    flex-direction: column;
     gap: 10px;
 }
 
