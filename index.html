@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>বাংলা ক্যালকুলেটর</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="result" disabled>
+        <div class="buttons">
+            <button onclick="appendValue('১')">১</button>
+            <button onclick="appendValue('২')">২</button>
+            <button onclick="appendValue('৩')">৩</button>
+            <button onclick="appendValue('+')">+</button>
+
+            <button onclick="appendValue('৪')">৪</button>
+            <button onclick="appendValue('৫')">৫</button>
+            <button onclick="appendValue('৬')">৬</button>
+            <button onclick="appendValue('-')">-</button>
+
+            <button onclick="appendValue('৭')">৭</button>
+            <button onclick="appendValue('৮')">৮</button>
+            <button onclick="appendValue('৯')">৯</button>
+            <button onclick="appendValue('*')">*</button>
+
+            <button onclick="appendValue('0')">০</button>
+            <button onclick="clearScreen()">C</button>
+            <button onclick="calculate()">=</button>
+            <button onclick="appendValue('/')">/</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
