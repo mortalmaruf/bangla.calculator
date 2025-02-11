@@ -17,35 +17,37 @@
 
         <!-- Calculator Buttons -->
         <div class="buttons">
-            <div class="row">
+            <div class="column">
                 <button onclick="appendValue('১')">১</button>
-                <button onclick="appendValue('২')">২</button>
-                <button onclick="appendValue('৩')">৩</button>
-                <button onclick="appendValue('+')" class="operator">+</button>
-                <button onclick="appendValue('√')" class="special">√</button>
-            </div>
-            <div class="row">
                 <button onclick="appendValue('৪')">৪</button>
-                <button onclick="appendValue('৫')">৫</button>
-                <button onclick="appendValue('৬')">৬</button>
-                <button onclick="appendValue('-')" class="operator">−</button>
-                <button onclick="appendValue('x²')" class="special">x²</button>
-            </div>
-            <div class="row">
                 <button onclick="appendValue('৭')">৭</button>
-                <button onclick="appendValue('৮')">৮</button>
-                <button onclick="appendValue('৯')">৯</button>
-                <button onclick="appendValue('*')" class="operator">×</button>
-                <button onclick="appendValue('x³')" class="special">x³</button>
-            </div>
-            <div class="row">
                 <button onclick="appendValue('০')">০</button>
+            </div>
+            <div class="column">
+                <button onclick="appendValue('২')">২</button>
+                <button onclick="appendValue('৫')">৫</button>
+                <button onclick="appendValue('৮')">৮</button>
                 <button onclick="appendValue('.')">.</button>
+            </div>
+            <div class="column">
+                <button onclick="appendValue('৩')">৩</button>
+                <button onclick="appendValue('৬')">৬</button>
+                <button onclick="appendValue('৯')">৯</button>
                 <button onclick="clearScreen()" class="clear">মুছুন</button>
+            </div>
+            <div class="column">
+                <button onclick="appendValue('+')" class="operator">+</button>
+                <button onclick="appendValue('-')" class="operator">−</button>
+                <button onclick="appendValue('*')" class="operator">×</button>
                 <button onclick="appendValue('/')" class="operator">÷</button>
+            </div>
+            <div class="column">
+                <button onclick="appendValue('√')" class="special">√</button>
+                <button onclick="appendValue('x²')" class="special">x²</button>
+                <button onclick="appendValue('x³')" class="special">x³</button>
                 <button onclick="appendValue('%')" class="special">%</button>
             </div>
-            <div class="row">
+            <div class="column">
                 <button onclick="backspace()" class="backspace">⌫</button>
                 <button onclick="calculate()" class="equal">=</button>
             </div>
