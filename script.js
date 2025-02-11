@@ -1,36 +1,41 @@
-// Function to convert Bengali numbers to English numbers
-function bengaliToEnglish(num) {
-    const bnToEn = {'০': '0', '১': '1', '২': '2', '৩': '3', '৪': '4', '৫': '5', '৬': '6', '৭': '7', '৮': '8', '৯': '9'};
-    return num.split('').map(char => bnToEn[char] || char).join('');
-}
-
-// Function to convert English numbers to Bengali numbers
-function englishToBengali(num) {
-    const enToBn = {'0': '০', '1': '১', '2': '২', '3': '৩', '4': '৪', '5': '৫', '6': '৬', '7': '৭', '8': '৮', '9': '৯'};
-    return num.toString().split('').map(char => enToBn[char] || char).join('');
-}
-
-// Function to append values to the input field
+// Function to append values to the display
 function appendValue(value) {
-    document.getElementById("result").value += value;
+    let display = document.getElementById("result");
+
+    // Replace * with × and / with ÷ for display (but keep actual values for calculations)
+    if (value === "*") {
+        display.value += "×";
+    } else if (value === "/") {
+        display.value += "÷";
+    } else {
+        display.value += value;
+    }
 }
 
-// Function to clear the input field
+// Function to clear the display
 function clearScreen() {
     document.getElementById("result").value = "";
 }
 
-// Function to evaluate the calculation
+// Function to calculate the result
 function calculate() {
-    let expression = document.getElementById("result").value;
+    let display = document.getElementById("result").value;
 
-    // Convert Bengali numbers to English before calculation
-    let englishExpression = bengaliToEnglish(expression);
+    // Convert displayed × and ÷ back to * and / for actual calculations
+    let expression = display.replace(/×/g, "*").replace(/÷/g, "/");
 
     try {
-        let result = eval(englishExpression); // Perform the calculation
-        document.getElementById("result").value = englishToBengali(result); // Convert the result back to Bengali
-    } catch (error) {
-        document.getElementById("result").value = "ত্রুটি"; // Error message in Bengali
+        let result = eval(expression);
+
+        // Convert result to Bengali numbers
+        document.getElementById("result").value = convertToBengali(result);
+    } catch {
+        document.getElementById("result").value = "ত্রুটি!";
     }
+}
+
+// Function to convert numbers to Bengali
+function convertToBengali(num) {
+    let bengaliDigits = { "0": "০", "1": "১", "2": "২", "3": "৩", "4": "৪", "5": "৫", "6": "৬", "7": "৭", "8": "৮", "9": "৯" };
+    return num.toString().replace(/[0-9]/g, (d) => bengaliDigits[d]);
 }
