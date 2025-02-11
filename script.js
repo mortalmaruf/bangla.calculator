@@ -27,23 +27,26 @@ function calculate() {
         return;
     }
 
+    // Convert Bengali digits to ASCII digits
+    let asciiExpression = convertToAscii(display);
+
     // Convert displayed × and ÷ back to * and / for actual calculations
-    let expression = display.replace(/×/g, "*").replace(/÷/g, "/");
+    asciiExpression = asciiExpression.replace(/×/g, "*").replace(/÷/g, "/");
 
     // Handle square root (√)
-    expression = expression.replace(/√(\d+)/g, (match, num) => `Math.sqrt(${num})`);
+    asciiExpression = asciiExpression.replace(/√(\d+)/g, (match, num) => `Math.sqrt(${num})`);
 
     // Handle square (x²)
-    expression = expression.replace(/(\d+)x²/g, (match, num) => `Math.pow(${num}, 2)`);
+    asciiExpression = asciiExpression.replace(/(\d+)x²/g, (match, num) => `Math.pow(${num}, 2)`);
 
     // Handle cube (x³)
-    expression = expression.replace(/(\d+)x³/g, (match, num) => `Math.pow(${num}, 3)`);
+    asciiExpression = asciiExpression.replace(/(\d+)x³/g, (match, num) => `Math.pow(${num}, 3)`);
 
     // Handle percentage (%)
-    expression = expression.replace(/(\d+)%/g, (match, num) => `${num}/100`);
+    asciiExpression = asciiExpression.replace(/(\d+)%/g, (match, num) => `${num}/100`);
 
     try {
-        let result = eval(expression);
+        let result = eval(asciiExpression);
 
         // Convert result to Bengali numbers
         document.getElementById("result").value = convertToBengali(result);
@@ -56,6 +59,12 @@ function calculate() {
 function convertToBengali(num) {
     let bengaliDigits = { "0": "০", "1": "১", "2": "২", "3": "৩", "4": "৪", "5": "৫", "6": "৬", "7": "৭", "8": "৮", "9": "৯" };
     return num.toString().replace(/[0-9]/g, (d) => bengaliDigits[d]);
+}
+
+// Function to convert Bengali digits to ASCII digits
+function convertToAscii(expression) {
+    const bengaliToAscii = { "০": "0", "১": "1", "২": "2", "৩": "3", "৪": "4", "৫": "5", "৬": "6", "৭": "7", "৮": "8", "৯": "9" };
+    return expression.replace(/[০-৯]/g, (d) => bengaliToAscii[d]);
 }
 
 // Function to validate the expression
