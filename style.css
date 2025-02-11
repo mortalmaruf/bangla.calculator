@@ -1,51 +1,120 @@
+/* General Page Styling */
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
+    font-family: 'SolaimanLipi', Arial, sans-serif; /* Bengali font */
+    background-color: #f4f4f4;
+    text-align: center;
     margin: 0;
+    padding: 0;
 }
 
+/* Title Styling */
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #333;
+}
+
+/* Calculator Container */
 .calculator {
-    background-color: white;
-    padding: 20px;
+    width: 280px;
+    background: #ffffff;
+    padding: 15px;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    width: 250px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
 }
 
-input {
+/* Display Screen */
+#result {
     width: 100%;
-    padding: 10px;
-    font-size: 20px;
+    height: 50px;
+    font-size: 22px;
     text-align: right;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: #f8f9fa;
     border-radius: 5px;
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Calculator Buttons */
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
+    margin-top: 15px;
 }
 
 button {
-    padding: 20px;
     font-size: 20px;
-    background-color: #f1f1f1;
+    font-weight: bold;
+    padding: 15px;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    border-radius: 5px;
+    transition: 0.2s;
 }
 
-button:hover {
-    background-color: #e0e0e0;
+/* Number Buttons */
+button:nth-child(n) {
+    background: #f1f1f1;
+    color: #333;
 }
 
-button:active {
-    background-color: #ccc;
+button:nth-child(n):hover {
+    background: #ddd;
 }
+
+/* Operator Buttons */
+button:nth-child(4n) {
+    background: #ff9500;
+    color: #fff;
+}
+
+button:nth-child(4n):hover {
+    background: #e68a00;
+}
+
+/* Clear Button */
+button:nth-child(14) {
+    background: #d9534f;
+    color: #fff;
+}
+
+button:nth-child(14):hover {
+    background: #c9302c;
+}
+
+/* Equal Button */
+button:nth-child(15) {
+    background: #28a745;
+    color: #fff;
+}
+
+button:nth-child(15):hover {
+    background: #218838;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #555;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #ddd;
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+    }
