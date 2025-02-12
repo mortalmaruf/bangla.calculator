@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>বাংলা গণনাযন্ত্র (মারুফের তৈরি)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Title -->
+    <h1 class="title">বাংলা গণনাযন্ত্র</h1>
+
+    <!-- Calculator Container -->
+    <div class="calculator">
+        <input type="text" id="result" disabled>
+
+        <!-- Calculator Buttons -->
+        <div class="buttons">
+            <button onclick="appendValue('১')">১</button>
+            <button onclick="appendValue('২')">২</button>
+            <button onclick="appendValue('৩')">৩</button>
+            <button class="operator" onclick="appendValue('+')">+</button>
+
+            <button onclick="appendValue('৪')">৪</button>
+            <button onclick="appendValue('৫')">৫</button>
+            <button onclick="appendValue('৬')">৬</button>
+            <button class="operator" onclick="appendValue('-')">−</button>
+
+            <button onclick="appendValue('৭')">৭</button>
+            <button onclick="appendValue('৮')">৮</button>
+            <button onclick="appendValue('৯')">৯</button>
+            <button class="operator" onclick="appendValue('*')">×</button>
+
+            <button onclick="appendValue('০')">০</button>
+            <button class="clear" onclick="clearScreen()">প</button>
+            <button class="equal" onclick="calculate()">=</button>
+            <button class="operator" onclick="appendValue('/')">÷</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            উৎসর্গঃ স্টিভ জবসখ্যাত প্রযুক্তি-অজ্ঞ <b>মোস্তাফা জব্বার</b> কে  
+            <br> (ভালোবাসা দিয়ে তৈরি করেছেন 
+            <a href="https://www.facebook.com/mortalmaruf" target="_blank">
+                মোঃ মারুফুল ইসলাম
+            </a>)
+        </p>
+    </footer>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+
+</body>
+</html>
