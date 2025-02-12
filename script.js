@@ -41,3 +41,39 @@ function calculate() {
         document.getElementById("result").value = "ত্রুটি"; // Error message in Bengali
     }
 }
+
+// Function to handle backspace
+function backspace() {
+    let result = document.getElementById("result");
+    result.value = result.value.slice(0, -1); // Remove the last character
+}
+
+// Function to calculate percentage
+function percentage() {
+    let result = document.getElementById("result");
+    let englishExpression = bengaliToEnglish(result.value);
+    try {
+        let value = eval(englishExpression);
+        let percentageValue = value / 100;
+        document.getElementById("result").value = englishToBengali(percentageValue);
+    } catch (error) {
+        document.getElementById("result").value = "ত্রুটি"; // Error message in Bengali
+    }
+}
+
+// Function to calculate square root
+function squareRoot() {
+    let result = document.getElementById("result");
+    let englishExpression = bengaliToEnglish(result.value);
+    try {
+        let value = eval(englishExpression);
+        if (value < 0) {
+            document.getElementById("result").value = "ত্রুটি"; // Error for negative numbers
+        } else {
+            let sqrtValue = Math.sqrt(value);
+            document.getElementById("result").value = englishToBengali(sqrtValue);
+        }
+    } catch (error) {
+        document.getElementById("result").value = "ত্রুটি"; // Error message in Bengali
+    }
+}
