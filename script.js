@@ -40,3 +40,4 @@ function calculate() {
     } catch (error) {
         document.getElementById("result").value = "ত্রুটি"; // Error message in Bengali
     }
+}
