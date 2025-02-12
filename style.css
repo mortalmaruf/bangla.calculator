@@ -1,6 +1,6 @@
 /* General Page Styling */
 body {
-    font-family: 'Noto Sans Bengali', Arial, sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     text-align: center;
     margin: 0;
@@ -113,4 +113,4 @@ footer a {
 footer a:hover {
     text-decoration: underline;
     color: #0056b3;
-  }
+}
